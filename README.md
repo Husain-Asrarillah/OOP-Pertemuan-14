@@ -140,17 +140,3 @@ Laporan Jasper
 
 
 -----
-
-## 📄 Format CSV untuk Upload
-
-Jika ingin menggunakan fitur Upload, format CSV seperti berikut:
-
-**Komik.csv**
-
-```csv
-Naruto; Action; 1999; 35000
-One Piece; Adventure; 1997; 40000
-```
-
-
------
