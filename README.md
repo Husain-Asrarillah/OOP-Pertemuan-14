@@ -1,10 +1,3 @@
-Tentu\! Ini adalah draf **`README.md`** yang profesional dan lengkap untuk repositori GitHub kamu.
-
-File ini sudah mencakup **Deskripsi**, **Fitur**, **Teknologi**, **Cara Instalasi**, dan **Skema Database**. Kamu tinggal salin kode di bawah ini, buat file baru bernama `README.md` di folder proyekmu, lalu paste.
-
------
-
-````markdown
 # 📚 Aplikasi Manajemen Data Komik (Manga Management System)
 
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
