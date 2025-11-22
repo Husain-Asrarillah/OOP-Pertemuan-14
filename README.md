@@ -1,1 +1,186 @@
-# OOP-Pertemuan-14
+Tentu\! Ini adalah draf **`README.md`** yang profesional dan lengkap untuk repositori GitHub kamu.
+
+File ini sudah mencakup **Deskripsi**, **Fitur**, **Teknologi**, **Cara Instalasi**, dan **Skema Database**. Kamu tinggal salin kode di bawah ini, buat file baru bernama `README.md` di folder proyekmu, lalu paste.
+
+-----
+
+````markdown
+# 📚 Aplikasi Manajemen Data Komik (Manga Management System)
+
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
+![NetBeans](https://img.shields.io/badge/NetBeans-1B6AC6?style=for-the-badge&logo=apache-netbeans-ide&logoColor=white)
+
+Aplikasi desktop berbasis **Java Swing** untuk mengelola data Komik, Pengarang, dan hubungan kerja sama (kolaborasi) di antara keduanya. Proyek ini dibuat untuk memenuhi tugas Praktikum Pemrograman Berorientasi Objek (PBO), dengan fokus pada implementasi **CRUD**, **JPA (Java Persistence API)**, dan **Relasi Database Many-to-Many**.
+
+---
+
+## ✨ Fitur Utama
+
+### 🔐 Autentikasi & Keamanan
+* **Login & Register:** Sistem autentikasi admin.
+* **Lupa Password:** Fitur pemulihan akun menggunakan *Security Question*.
+* **Validasi:** Pengecekan username ganda dan input kosong.
+
+### 📂 Manajemen Data (CRUD)
+* **Data Komik:** Mengelola judul, genre, tahun, dan harga.
+* **Data Pengarang:** Mengelola nama, negara asal, dan status.
+* **Detail Karya (Many-to-Many):** Menghubungkan Komik dan Pengarang dengan peran spesifik (misal: *Story Writer*, *Illustrator*).
+* **Reusable Dialog:** Form input menggunakan JDialog yang dinamis (Satu form untuk Insert & Edit).
+
+### 🛠️ Tools & Laporan
+* **Upload CSV:** Import data massal dari file Excel/CSV.
+* **Download CSV:** Export data database ke file CSV.
+* **Cetak Laporan:** Generate laporan PDF menggunakan **JasperReports**.
+* **Auto Refresh:** Data tabel otomatis diperbarui saat berpindah tab.
+
+---
+
+## 💻 Teknologi yang Digunakan
+
+* **Bahasa:** Java (JDK 8+)
+* **GUI Framework:** Java Swing (JFrame, JDialog, JTabbedPane)
+* **Database:** PostgreSQL
+* **ORM / Persistence:** EclipseLink (JPA 2.1)
+* **Reporting:** JasperReports 6.x
+* **IDE:** Apache NetBeans
+
+---
+
+## 🗄️ Skema Database
+
+Aplikasi ini menggunakan skema relasional **Many-to-Many** dengan tabel junction `detail_karya`.
+
+```sql
+-- 1. Tabel Admin
+CREATE TABLE login (
+    username VARCHAR(50) PRIMARY KEY,
+    password VARCHAR(255) NOT NULL,
+    full_name VARCHAR(100),
+    security_question VARCHAR(255),
+    security_answer VARCHAR(255)
+);
+
+-- 2. Master Komik
+CREATE TABLE komik (
+    komik_id SERIAL PRIMARY KEY,
+    judul VARCHAR(150) NOT NULL,
+    genre VARCHAR(50),
+    tahun_terbit INT,
+    harga DECIMAL(12, 2)
+);
+
+-- 3. Master Pengarang
+CREATE TABLE pengarang (
+    pengarang_id SERIAL PRIMARY KEY,
+    nama VARCHAR(100) NOT NULL,
+    negara VARCHAR(50),
+    status VARCHAR(20)
+);
+
+-- 4. Relasi (Junction Table)
+CREATE TABLE detail_karya (
+    id SERIAL PRIMARY KEY,
+    komik_id INT REFERENCES komik(komik_id) ON DELETE CASCADE,
+    pengarang_id INT REFERENCES pengarang(pengarang_id) ON DELETE CASCADE,
+    peran VARCHAR(50) -- Contoh: 'Writer', 'Illustrator'
+);
+````
+
+-----
+
+## 🚀 Cara Instalasi & Menjalankan
+
+1.  **Clone Repositori**
+
+    ```bash
+    git clone [https://github.com/username-kamu/nama-repo.git](https://github.com/username-kamu/nama-repo.git)
+    ```
+
+2.  **Setup Database**
+
+      * Buka pgAdmin atau terminal PostgreSQL.
+      * Buat database baru (misal: `db_komik`).
+      * Jalankan script SQL di atas untuk membuat tabel.
+
+3.  **Konfigurasi Koneksi (NetBeans)**
+
+      * Buka project di NetBeans.
+      * Masuk ke folder `Configuration Files` \> `META-INF` \> `persistence.xml`.
+      * Sesuaikan properti berikut dengan database lokal kamu:
+        ```xml
+        <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/db_komik"/>
+        <property name="javax.persistence.jdbc.user" value="postgres"/>
+        <property name="javax.persistence.jdbc.password" value="password_kamu"/>
+        ```
+
+4.  **Tambahkan Library (JAR)**
+    Pastikan library berikut sudah ada di folder `Libraries` NetBeans:
+
+      * `postgresql-jdbc.jar`
+      * `eclipselink.jar` & `javax.persistence.jar`
+      * `jasperreports` (dan dependensinya: commons-logging, commons-collections, dll).
+
+5.  **Run Project**
+
+      * Jalankan file `LoginPage.java` sebagai entry point.
+
+-----
+
+## 📷 Screenshots
+
+*(Ganti bagian ini dengan screenshot asli aplikasimu)*
+
+| Halaman Login | Dashboard Utama |
+| :---: | :---: |
+|  |  |
+
+| Input Dialog | Laporan Jasper |
+| :---: | :---: |
+|  |  |
+
+-----
+
+## 📄 Format CSV untuk Upload
+
+Jika ingin menggunakan fitur Upload, pastikan format CSV tanpa header seperti berikut:
+
+**Komik.csv**
+
+```csv
+Naruto, Action, 1999, 35000
+One Piece, Adventure, 1997, 40000
+```
+
+**Pengarang.csv**
+
+```csv
+Masashi Kishimoto, Jepang, Hiatus
+Eiichiro Oda, Jepang, Aktif
+```
+
+**DetailKarya.csv**
+
+```csv
+Naruto, Masashi Kishimoto, Story Writer
+Naruto, Masashi Kishimoto, Illustrator
+```
+
+-----
+
+## 👤 Author
+
+**Nama Kamu**
+
+  * Mahasiswa Teknik Informatika
+  * Universitas ...
+
+-----
+
+```
+
+### 💡 Tips Tambahan:
+1.  **Screenshots:** Jangan lupa ambil screenshot aplikasimu saat dijalankan (Login, Halaman Utama, Dialog, Laporan), simpan gambarnya di folder projek, lalu update link `path/to/screenshot.png` di kode di atas.
+2.  **Username Github:** Ganti link `git clone` dengan link repo aslimu.
+3.  **Commit:** Saat commit ke GitHub, pastikan folder `src`, `nbproject`, dan file `build.xml` ter-upload, tapi folder `build` dan `dist` biasanya di-ignore (masukkan ke `.gitignore`).
+```
