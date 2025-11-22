@@ -125,15 +125,15 @@ CREATE TABLE detail_karya (
 *(Ganti bagian ini dengan screenshot asli aplikasimu)*
 
 | Halaman Login | Dashboard Utama |
-| :<img width="150" height="167" alt="image" src="https://github.com/user-attachments/assets/7cf4f2cc-92d4-461c-8550-3ab57d3e9628" />
-: | :<img width="924" height="651" alt="image" src="https://github.com/user-attachments/assets/7f163089-e033-4db5-91f6-0509610f57da" />
-: |
+| <img width="150" height="167" alt="image" src="https://github.com/user-attachments/assets/7cf4f2cc-92d4-461c-8550-3ab57d3e9628" />
+ | <img width="924" height="651" alt="image" src="https://github.com/user-attachments/assets/7f163089-e033-4db5-91f6-0509610f57da" />
+ |
 |  |  |
 
 | Input Dialog | Laporan Jasper |
-| :<img width="302" height="385" alt="image" src="https://github.com/user-attachments/assets/c467e13c-c80e-49f2-8e5c-8d82c7b5ac95" />
-: | :<img width="488" height="320" alt="image" src="https://github.com/user-attachments/assets/ff928d8a-9712-4ae7-aa83-28ddff891c8f" />
-: |
+| <img width="302" height="385" alt="image" src="https://github.com/user-attachments/assets/c467e13c-c80e-49f2-8e5c-8d82c7b5ac95" />
+ | <img width="488" height="320" alt="image" src="https://github.com/user-attachments/assets/ff928d8a-9712-4ae7-aa83-28ddff891c8f" />
+ |
 |  |  |
 
 -----
