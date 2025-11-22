@@ -87,7 +87,7 @@ CREATE TABLE detail_karya (
 1.  **Clone Repositori**
 
     ```bash
-    git clone [https://github.com/username-kamu/nama-repo.git](https://github.com/username-kamu/nama-repo.git)
+    git clone [https://github.com/username-kamu/nama-repo.git](https://github.com/Husain-Asrarillah/OOP-Pertemuan-14)
     ```
 
 2.  **Setup Database**
@@ -125,7 +125,8 @@ CREATE TABLE detail_karya (
 *(Ganti bagian ini dengan screenshot asli aplikasimu)*
 
 | Halaman Login | Dashboard Utama |
-| :---: | :---: |
+| <img width="235" height="261" alt="image" src="https://github.com/user-attachments/assets/d03bcef1-be98-42da-986c-03e07ffdf267" />
+ | :---: |
 |  |  |
 
 | Input Dialog | Laporan Jasper |
@@ -136,44 +137,14 @@ CREATE TABLE detail_karya (
 
 ## 📄 Format CSV untuk Upload
 
-Jika ingin menggunakan fitur Upload, pastikan format CSV tanpa header seperti berikut:
+Jika ingin menggunakan fitur Upload, format CSV seperti berikut:
 
 **Komik.csv**
 
 ```csv
-Naruto, Action, 1999, 35000
-One Piece, Adventure, 1997, 40000
+Naruto; Action; 1999; 35000
+One Piece; Adventure; 1997; 40000
 ```
-
-**Pengarang.csv**
-
-```csv
-Masashi Kishimoto, Jepang, Hiatus
-Eiichiro Oda, Jepang, Aktif
-```
-
-**DetailKarya.csv**
-
-```csv
-Naruto, Masashi Kishimoto, Story Writer
-Naruto, Masashi Kishimoto, Illustrator
-```
+`
 
 -----
-
-## 👤 Author
-
-**Nama Kamu**
-
-  * Mahasiswa Teknik Informatika
-  * Universitas ...
-
------
-
-```
-
-### 💡 Tips Tambahan:
-1.  **Screenshots:** Jangan lupa ambil screenshot aplikasimu saat dijalankan (Login, Halaman Utama, Dialog, Laporan), simpan gambarnya di folder projek, lalu update link `path/to/screenshot.png` di kode di atas.
-2.  **Username Github:** Ganti link `git clone` dengan link repo aslimu.
-3.  **Commit:** Saat commit ke GitHub, pastikan folder `src`, `nbproject`, dan file `build.xml` ter-upload, tapi folder `build` dan `dist` biasanya di-ignore (masukkan ke `.gitignore`).
-```
