@@ -122,19 +122,16 @@ CREATE TABLE detail_karya (
 
 ## 📷 Screenshots
 
-*(Ganti bagian ini dengan screenshot asli aplikasimu)*
+Halaman Login
+<img width="525" height="583" alt="image" src="https://github.com/user-attachments/assets/4f3ff560-57cb-48c4-af72-f52394e54713" />
+ Dashboard Utama 
+<img width="924" height="651" alt="image" src="https://github.com/user-attachments/assets/4b6d5b2d-9f01-49db-8ebe-f020bae24dfd" />
 
-| Halaman Login | Dashboard Utama |
-| :---: | :---: |
-| <img width="525" height="583" alt="image" src="https://github.com/user-attachments/assets/4f3ff560-57cb-48c4-af72-f52394e54713" />
- | <img width="924" height="651" alt="image" src="https://github.com/user-attachments/assets/4b6d5b2d-9f01-49db-8ebe-f020bae24dfd" />
- |
 
-| Input Dialog | Laporan Jasper |
-| :---: | :---: |
-| <img width="302" height="385" alt="image" src="https://github.com/user-attachments/assets/0fb79193-9dce-4e16-adc9-cb37a19c34d0" />
- | <img width="488" height="320" alt="image" src="https://github.com/user-attachments/assets/0fe40f65-81af-4b3d-8534-d84ed3275c6e" />
- |
+Input Dialog
+<img width="302" height="385" alt="image" src="https://github.com/user-attachments/assets/0fb79193-9dce-4e16-adc9-cb37a19c34d0" />
+Laporan Jasper
+<img width="488" height="320" alt="image" src="https://github.com/user-attachments/assets/0fe40f65-81af-4b3d-8534-d84ed3275c6e" />
 
 
 -----
